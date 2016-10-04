@@ -23,12 +23,9 @@ lsys = LSystem.LSystem("X", ruleSet)
 
 
 def draw():
-    lsys.generate()
-    lsys.generate()
-    lsys.generate()
-    lsys.generate()
-    lsys.generate()
-    lsys.generate()
+    x = 6
+    for i in range (0, x):
+        lsys.generate()
     drawer = DrawSystem.DrawSystem(lsys.getSentence(), 5, 25)
     drawer.render()
 
