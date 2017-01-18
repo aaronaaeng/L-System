@@ -1,0 +1,11 @@
+#Big plant, 5 iterations, change color rules
+#ruleSet = [Rule.Rule("F", "FF-[-F+F+F]+[+F-F-F]")]
+#lsys = LSystem.LSystem("F", ruleSet)
+
+#Cool shape, 4 iterations
+#ruleSet = [Rule.Rule("F-F-F-F-F", "F=F-F++F+F-F-F")]
+#lsys = LSystem.LSystem("F", ruleSet)
+
+#Original plant, 4 iterations
+#ruleSet = [Rule.Rule("F", "FF+[+F-F-F]-[-F+F+F]")]
+#lsys = LSystem.LSystem("F", ruleSet)

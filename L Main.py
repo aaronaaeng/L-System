@@ -1,32 +1,20 @@
-import turtle
-from turtle import *
-
 import DrawSystem
 import LSystem
 import Rule
 
-#Original plant, 4 iterations
-#ruleSet = [Rule.Rule("F", "FF+[+F-F-F]-[-F+F+F]")]
-#lsys = LSystem.LSystem("F", ruleSet)
 
-#Classic plant, 6 iterations
-ruleSet = [Rule.Rule("X", " F-[[X]+X]+F[+FX]-X"), Rule.Rule("F", "FF")]
-lsys = LSystem.LSystem("X", ruleSet)
+def main():
+    rule_set = [Rule.Rule("X", " F-[[X]+X]+F[+FX]-X"), Rule.Rule("F", "FF")]
+    lin_system = LSystem.LSystem("X", rule_set)
 
-#Big plant, 5 iterations, change color rules
-#ruleSet = [Rule.Rule("F", "FF-[-F+F+F]+[+F-F-F]")]
-#lsys = LSystem.LSystem("F", ruleSet)
-
-#Cool shape, 4 iterations
-#ruleSet = [Rule.Rule("F-F-F-F-F", "F=F-F++F+F-F-F")]
-#lsys = LSystem.LSystem("F", ruleSet)
+    draw(lin_system)
 
 
-def draw():
-    x = 6
-    for i in range (0, x):
-        lsys.generate()
-    drawer = DrawSystem.DrawSystem(lsys.getSentence(), 5, 25)
+def draw(l_system):
+    for i in range(0, 6):
+        l_system.generate()
+    drawer = DrawSystem.DrawSystem(l_system.get_sentence(), 5, 25)
     drawer.render()
 
-draw()
+if __name__ == "__main__":
+    main()

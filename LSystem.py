@@ -18,9 +18,9 @@ class LSystem:
             replacementStr = "" + currentCharacter
 
             for j in range (0, len (self.ruleSet)):
-                a = self.ruleSet[j].getA()
+                a = self.ruleSet[j].get_a()
                 if a == currentCharacter :
-                    replacementStr = self.ruleSet[j].getB()
+                    replacementStr = self.ruleSet[j].get_b()
                     break
 
             nextGen += replacementStr
