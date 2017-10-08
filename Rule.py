@@ -6,8 +6,8 @@ class Rule:
         self.a = a
         self.b = b
 
-    def getA(self):
+    def get_a(self):
         return self.a
 
-    def getB(self):
+    def get_b(self):
         return self.b

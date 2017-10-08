@@ -29,9 +29,8 @@ class LSystem:
 
         self.generationInt += 1
 
-    def getSentence (self):
+    def get_sentence (self):
         return self.sentence
 
-    def getGeneration (self):
+    def get_generation (self):
         return self.generationInt
-

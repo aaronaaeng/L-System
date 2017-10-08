@@ -27,7 +27,7 @@ class DrawSystem:
         pen1.pendown()
         pen1.screen.bgcolor("#ffffff")
         pen1.color("#996633")
-        #turtle.tracer(0.0)
+        turtle.tracer(0.0)
         turtle.resizemode("auto")
         for i in range (0, len(self.todo)):
 
@@ -43,7 +43,7 @@ class DrawSystem:
                 pen1.left(self.theta)
             elif c == "[":
                 self.Stack.append(State.State(pen1.xcor(), pen1.ycor(), pen1.heading()))
-                print("push")
+                # print("push")
                 self.len *= .9
             elif c == "]":
                 pen1.penup()
@@ -53,7 +53,7 @@ class DrawSystem:
                 pen1.setheading(self.Stack[last].theta)
                 self.Stack.pop()
                 pen1.pendown()
-                print ("pop")
+                # print ("pop")
                 self.len *= 1/.9
             if len(self.Stack) > 4:
                 pen1.color("#31932D")
